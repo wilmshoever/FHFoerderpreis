@@ -1,5 +1,6 @@
 <div class="container_24">
 	<div class="grid_12">
+		<br />
 		<div id="slider">
 			<ul class="navigation">
 				<li><a href="#home">Mach mit!</a></li>

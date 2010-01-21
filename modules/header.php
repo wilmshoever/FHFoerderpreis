@@ -1,3 +1,4 @@
+<div class="clear"></div>
 <div class="container_24">
 	<div class="grid_4">
 		<img src="./img/FHF_logo.png" />

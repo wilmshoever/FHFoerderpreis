@@ -15,7 +15,7 @@ Author URI: http://zeidlos.de/
 <!Doctype:HTML>
 <html>
 	<?php include('./modules/head.php'); ?>
-<body>
+<body><br />
 	<div id="main">
 		<div id="header">
 			<?php include('./modules/teaser.php'); ?>

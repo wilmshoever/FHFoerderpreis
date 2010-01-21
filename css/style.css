@@ -68,12 +68,32 @@ body {
 	filter: “alpha(opacity=40)”; /*for Internet Explorer 8*/
 }
 
+.green_gradient {
+	background-image:url(../img/green_gradient.png);
+	background-repeat:repeat-x;
+	background-color:rgb(42,42,42);
+	opacity:1;
+	filter: alpha(opacity=40); /*for Internet Explorer 6/7*/
+	filter: “alpha(opacity=40)”; /*for Internet Explorer 8*/
+}
+
 .rounded {
 	border-radius: 14px 14px 14px 14px;
 	-webkit-border-radius:14px;
 	-moz-border-radius: 14px 14px 14px 14px;
 	-o-border-radius: 14px 14px 14px 14px;
 	-khtml-border-radius: 14px 14px 14px 14px;	
+}
+
+.top_rounded {
+	border-radius: 14px 14px 0px 0px;
+//	-webkit-border-radius-top:14px;
+	-moz-border-radius: 14px 14px 0px 0px;
+	-o-border-radius: 14px 14px 0px 0px;
+	-khtml-border-radius: 14px 14px 0px 0px;	
+	width:960px;
+	margin-bottom:10px;
+	height:100px;
 }
 
 .searchbox {
