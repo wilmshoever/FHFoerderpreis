@@ -13,12 +13,14 @@ Author URI: http://zeidlos.de/
 	<?php include('./modules/head.php'); ?>
 <body>
 	<div id="main">
-		<div id="navigation">
+        <!--
+        <div id="navigation">
 			<?php include('./modules/top_navigation.php'); ?>
 		</div>
 		<div id="header">
 			<?php include('./modules/header.php'); ?>
 		</div>
+        -->
 		<div id="content">
 			<?php include('./modules/content.php'); ?>
 		</div>
@@ -27,4 +29,5 @@ Author URI: http://zeidlos.de/
 		</div>
 	</div>
 </body>
+
 </html>

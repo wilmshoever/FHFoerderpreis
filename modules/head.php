@@ -11,4 +11,11 @@
 	<script src="./js/jquery.localscroll-1.2.5.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+    	});
+    </script>
 </head>

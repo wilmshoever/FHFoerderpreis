@@ -1,18 +1,13 @@
 <div class="container_24">
-	<div class="gradient rounded grid_4">
-		<div class="padding">
-			<ul>
-				<h3>Navigation</h3>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-				<li>Item 4</li>
-				<li>Item 5</li>
-				<li>Item 6</li>
-			</ul>
+
+<div class="grid_12">
+        <!-- die Navigation wird hier wegen der Breite und Position eingebunden! -->
+        <div id="navigation">
+			<?php include('./modules/top_navigation.php'); ?>
 		</div>
-	</div>
-	<div class="gradient rounded grid_16">
+        <div id="content_slider" class="padding">
+			<?php include('./modules/content_slider.php'); ?>
+		</div>
 		<div class="padding">
 			<h2>Blindtext H2</h2>
 			<p>Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen.</p>
@@ -25,10 +20,13 @@
 			<h4>Blindtext H4</h4>
 			<p> Was für eine Erleichterung. Standards sparen Zeit bei den Entwicklungskosten und sorgen dafür, dass sich Webseiten später leichter pflegen lassen. Natürlich nur dann, wenn sich alle an diese Standards halten. Das gilt für Browser wie Firefox, Opera, Safari und den Internet Explorer ebenso wie für die Darstellung in Handys. Und was können Sie für Standards tun? Fordern Sie von Ihren Designern und Programmieren einfach standardkonforme Webseiten. Ihr Budget wird es Ihnen auf Dauer danken. Ebenso möchte ich Ihnen dafür danken, dass Sie mich bin zum Ende gelesen </p>
 
-			
+
 		</div>
 	</div>
-	<div class="gradient rounded grid_4">
+	<div class="grid_12">
+	    <img src="./img/FHFoerderPlakat.png">
+	</div>
+    <div class="gradient rounded grid_12">
 		<div class="padding">
 			<ul>
 				<h3>Sponsoren</h3>
@@ -40,6 +38,6 @@
 				<li>Item 6</li>
 			</ul>
 		</div>
-	</div>	
+	</div>
 </div>
 <div class="clear"></div>

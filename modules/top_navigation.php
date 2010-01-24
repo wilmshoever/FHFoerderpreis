@@ -1,5 +1,42 @@
-	<div class="top_rounded green_gradient">
-		<div class="top_navigation">
-			<span style="height:100px;">Hello</span>
-		</div>
-	</div>
+<ul>
+  <li><a href="#">Kategorien</a>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Sponsoren</a>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Mach mit!</a>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Forum</a>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Blog</a>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        </ul>
+  </li>
+</ul>
