@@ -6,18 +6,17 @@ Description: CSS for FHF
 Author: Julius Zeidler (julius@zeidlos.de)
 Author URI: http://zeidlos.de/
 */
-
-/* init theme variables */
-
-
 ?>
 
 <!Doctype:HTML>
 <html>
 	<?php include('./modules/head.php'); ?>
-<body><br />
+<body>
 	<div id="main">
 		<div id="header">
+			<?php include('./modules/top_navigation.php');?>
+		</div>
+		<div id="content">
 			<?php include('./modules/teaser.php'); ?>
 		</div>
 		<div id="footer">

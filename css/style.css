@@ -25,14 +25,21 @@ body {
 }
 
 #main {
-	background-color:rgb(23,23,23);
 	width:960px;
 	margin:auto;
-	-webkit-border-radius:14px;
+}
+
+#content {
+	background-color:rgb(23,23,23);
+}
+
+#footer {
+	background-color:rgb(23,23,23);
 	border-radius: 0px 0px 14px 14px;
 	-moz-border-radius: 0px 0px 14px 14px;
 	-o-border-radius: 0px 0px 14px 14px;
 	-khtml-border-radius: 0px 0px 14px 14px;
+	-webkit-border-radius:14px;
 }
 
 #headnav {
@@ -87,15 +94,19 @@ body {
 
 .top_rounded {
 	border-radius: 14px 14px 0px 0px;
-//	-webkit-border-radius-top:14px;
+	-webkit-border-radius-top:14px;
 	-moz-border-radius: 14px 14px 0px 0px;
 	-o-border-radius: 14px 14px 0px 0px;
 	-khtml-border-radius: 14px 14px 0px 0px;	
 	width:960px;
 	margin-bottom:10px;
-	height:100px;
+	height:50px;
 }
 
+.top_navigation {
+	padding:10px;
+	color:rgb(23,23,23);
+}
 .searchbox {
 	padding:2px;
 	padding-left:8px;
