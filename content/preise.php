@@ -11,7 +11,7 @@ Es wird unter anderem folgende Preise zu gewinnen geben:
 		</li>
 		<li>
 			Mehrt&auml;gige Schulungen inkl. &Uuml;bernachtung bei 
-			<a href="http://fhbk.de">Comcave/Dortmund.</a>
+			<a href="http://fhbk.de">Comcave in Dortmund.</a>
 		</li>
 		<li>
 			Ausstellungen in Dortmund und im Museum 
