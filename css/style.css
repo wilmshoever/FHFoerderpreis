@@ -31,6 +31,7 @@ body {
 
 #content {
 	background-color:rgb(23,23,23);
+	padding-top:100px;
 }
 
 #footer {
@@ -42,12 +43,6 @@ body {
 	-webkit-border-radius:14px;
 }
 
-#headnav {
-	width:960px;
-	height:30px;
-	margin:auto;
-}
-
 #header {
 	width:960px;
 	height:52px;
@@ -56,13 +51,10 @@ body {
 	padding-bottom:10px;
 }
 
-#navigation{
-  background-color:rgb(23,23,23);
-  padding-bottom:40px;
-  padding-top:30px;
-  padding-left:4px;
-  z-index: 100000;
-  position:absolute;
+#navigation {
+	z-index:1000;
+	position:absolute;
+	height:80px;
 }
 
 #navigation ul li{
@@ -78,8 +70,8 @@ body {
 }
 
 #navigation ul li ul li a{
-  opacity:0.85;
-  filter:alpha(opacity=85)
+	background-color:rgb(215,217,58);
+	color:black;
 }
 
 #navigation ul li ul li a:hover{
@@ -103,7 +95,6 @@ body {
 	-moz-border-radius: 7px 7px 7px 7px;
 	-o-border-radius: 7px 7px 7px 7px;
 	-khtml-border-radius: 7px 7px 7px 7px;
-
 }
 
 #navigation li a:hover,
@@ -144,12 +135,10 @@ body {
 }
 
 .green_gradient {
-	background-image:url(../img/green_gradient.png);
+	background-image:url(../img/ui/green_gradient.png);
 	background-repeat:repeat-x;
 	background-color:rgb(42,42,42);
-	opacity:1;
-	filter: alpha(opacity=40); /*for Internet Explorer 6/7*/
-	filter: “alpha(opacity=40)”; /*for Internet Explorer 8*/
+	height:50px;
 }
 
 .rounded {
@@ -158,6 +147,10 @@ body {
 	-moz-border-radius: 14px 14px 14px 14px;
 	-o-border-radius: 14px 14px 14px 14px;
 	-khtml-border-radius: 14px 14px 14px 14px;	
+}
+
+.login {
+	display:inline;
 }
 
 .top_rounded {
@@ -171,19 +164,18 @@ body {
 	height:50px;
 }
 
-.top_navigation {
-	padding:10px;
-	color:rgb(23,23,23);
-}
 .searchbox {
 	padding:2px;
 	padding-left:8px;
 	color:rgb(123,123,123);
-	margin-top:17px;
 }
 
 .padding {
 	padding:10px;
+}
+
+.padding_top {
+	padding-top:45px;
 }
 
 a {
@@ -194,6 +186,8 @@ a {
 p {
 	margin-bottom:1.5em;
 }
+
+/* Headings */
 
 h1,h2,h3,h4,h5,h6 {
 	color:rgb(215,217,58);
@@ -281,7 +275,6 @@ clear:both;
 height:420px;
 overflow:hidden;
 position:relative;
-padding-top:100px;
 padding-left:11px;
 }
 

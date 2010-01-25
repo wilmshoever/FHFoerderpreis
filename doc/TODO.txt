@@ -1,0 +1,4 @@
+File  				Comment  
+content.php (6)	 	Content der Slideshow dynamisch machen, bzw. von der eigentlichen Moduldatei entkoppeln.
+footer.php (2)	 	Footerbereich aufr�umen und Sponsorenlogos sinnvoll anordnen.
+slideshow.php (2)	Inhalt dynamisch machen.
