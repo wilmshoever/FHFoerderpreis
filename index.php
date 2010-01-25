@@ -1,4 +1,6 @@
 <?php
+/* This is a test */
+
 /* Abfrage des Inhalts über get-Parameter. z.B. fhbk.de/foerderpreis/index.php?id=mitmachen */
 $page=$_GET['id'];
 /* Wenn in $page was drinnen steht, dann: */
