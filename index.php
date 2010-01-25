@@ -1,11 +1,18 @@
 <?php
-/*
-Theme Name: FHF
-Theme URI: http://fhbk.de/foerderpreis
-Description: CSS for FHF
-Author: Julius Zeidler (julius@zeidlos.de)
-Author URI: http://zeidlos.de/
-*/
+/* Abfrage des Inhalts über get-Parameter. z.B. fhbk.de/foerderpreis/index.php?id=mitmachen */
+$page=$_GET['id'];
+
+/* Wenn in $page was drinnen steht, dann: */
+if($page) 
+		{ 
+			/* For security reasons only */
+			$page=strip_tags($page);
+			$page=stripslashes($page);		
+		}
+/* Ansonsten wird die Variable mit einem Default wert geschrieben */
+	else {
+		$page='index';
+	}
 ?>
 
 <!Doctype:HTML>
@@ -13,14 +20,9 @@ Author URI: http://zeidlos.de/
 	<?php include('./modules/head.php'); ?>
 <body>
 	<div id="main">
-        <!--
-        <div id="navigation">
+    	<div id="navigation" class="green_gradient">
 			<?php include('./modules/top_navigation.php'); ?>
 		</div>
-		<div id="header">
-			<?php include('./modules/header.php'); ?>
-		</div>
-        -->
 		<div id="content">
 			<?php include('./modules/content.php'); ?>
 		</div>
