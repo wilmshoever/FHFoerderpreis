@@ -74,6 +74,21 @@ a:hover {
 
 p {
 	margin-bottom:1.5em;
+	margin-top:10px;
+}
+
+em {
+	color:rgb(200,200,200);
+}
+
+blockquote {
+	padding-left:20px;
+	white-space:pre-wrap;
+}
+
+code {
+	color:rgb(215,217,58);
+	white-space:pre-wrap;
 }
 
 #content ul {
