@@ -367,16 +367,27 @@ Wer nur kleine &Auml;nderungen macht die nichts kaputt machen, k&ouml;nnt ihr di
 Das Ganze mag am Anfang etwas kompliziert, aufgeblasen und merkw&uuml;rdig klingen. Sobald ihr aber die ersten Gehversuche hinter euch habt, werdet ihr merken, dass dies der einzige und ultimative Weg ist, mit anderen an einem Projekt zusammen zu arbeiten. Ihr k&ouml;nnt sehen, wer was aus welchem Grund ge&auml;ndert hat, und wisst so, was ihr mit den &Auml;nderungen anfangen sollt. Ihr k&ouml;nnt die &Auml;nderungen auch direkt &uuml;bernehmen und braucht euch nicht darum k&uuml;mmern, die Dateien von euch mit den soeben auf einem USB-Stick erhaltenen per Hand zu vergleichen. Ihr braucht auch nicht tausende Kopien von dem Projektordner aufbewahren, nur um die alten St&auml;nde zu sichern. Um all das k&uuml;mmert sich Git!</p>
 <p>
 Zum Schluss noch ein paar Links um weiterf&uuml;hrende Dinge nachlesen zu k&ouml;nnen oder sie noch mal von jemand anderem beschrieben zu bekommen. :)
-
+</p>
 <a href="http://learn.github.com">http://learn.github.com</a> (engl.) Tutorial f&uuml;r Einsteiger
+<br />
 <a href="http://help.github.com">http://help.github.com</a> (engl.) Hilfe bei Installation, SSH-Keys, uvm.
+<br />
 <a href="http://github.com/guides/home">http://github.com/guides/home</a> (engl.) Weiterf&uuml;hrendes
+<br />
 <a href="http://git-scm.com/documentation">http://git-scm.com/documentation</a> (engl.) Seite mit vielen Links zu diversen Themen.
+<br />
 <a href="http://github.com/guides/git-cheat-sheet">http://github.com/guides/git-cheat-sheet</a> (engl.) Cheat-Sheet
+<br />
 <a href="http://ktown.kde.org/%7Ezrusin/git/git-cheat-sheet-large.png">http://ktown.kde.org/%7Ezrusin/git/git-cheat-sheet-large.png</a> (engl.) Noch ein Cheat-Sheet.
+<br />
 <a href="http://progit.org/book/">Progit &ndash; Ein Buch &uuml;ber git.</a> (engl.)
+<br />
 <a href="http://hoth.entp.com/output/git_for_designers.html">Git f&uuml;r Designer. Noch ein Anf&auml;ngertutorial</a> (engl.)
+<br />
 <a href="http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html</a> (engl.) Offizielles Git Tutorial.
+<br />
 <a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a> (engl.) Git in 20 Kommandos.
+<br />
 <a href="http://www.spheredev.org/wiki/Git_for_the_lazy">http://www.spheredev.org/wiki/Git_for_the_lazy</a> (engl.) Git f&uuml;r Faule. :)
+<br />
 <a href="http://de.gitready.com/">http://de.gitready.com/</a> (deutsch) Deutsche Seite mit Tipps und Hinweisen zum Thema Git.
