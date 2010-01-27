@@ -15,13 +15,17 @@ Es wird unter anderem folgende Preise zu gewinnen geben:
 		</li>
 		<li>
 			Ausstellungen in Dortmund und im Museum 
-			<a href="http://fhbk.de">"Camera Obscura"</a> in M&uuml;hlheim.
+			<a href="http://fhbk.de">"Camera Obscura"</a> in M&uuml;lheim.
 		</li>
 		<li>
 			Sachpreise von <a href="http://bron.de">bron</a>, 
 			<a href="http://hp.com/">hp</a>, <a href="http://efi.com">efi</a>, 
 			<a href="http://sunbounce.com">Sunbounce</a> u.a.
 		</li>
+                <li>
+			Software von Adobe und Apple
+		</li>
+
 		<li>
 			Fotob&uuml;cher im Maximalformat von FujiFilm
                         <a href="http://fujidirekt/a>,
