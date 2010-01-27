@@ -1,10 +1,10 @@
-<h1>Git f&uuml;r Anf&auml;nger</h1>
+<h2>Git f&uuml;r Anf&auml;nger</h2>
 
-<h2>Was ist Git?</h2>
+<h3>Was ist Git?</h3>
 <p>Git ist ein verteiltes Versionierungssystem. Doch was bedeutet das? Wikipedia sagt dazu:
 <blockquote>Eine Versionsverwaltung ist ein System, das zur Erfassung von &Auml;nderungen an Dokumenten oder Dateien verwendet wird. Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesichert und k&ouml;nnen sp&auml;ter wieder hergestellt werden. Versionsverwaltungssysteme werden typischerweise in der Softwareentwicklung eingesetzt um Quelltexte zu verwalten. Versionsverwaltung kommt auch bei B&uuml;roanwendungen oder Content-Management-Systemen zum Einsatz.</blockquote>
 </p>
-<h2>Was kann Git?</h2>
+<h3>Was kann Git?</h3>
 <p>
 Git ist also ein System um verschiedene Versionen von Dateien zu verwalten. Doch Git kann noch viel mehr: Git kann die Versionen von Dateien verschiedener Nutzer verwalten. Git kann auch Dateien vergleichen und sie zusammenf&uuml;hren.
 </p>	
@@ -46,19 +46,19 @@ In der Praxis kommt es recht selten zu Konflikten, da die Aufgaben im Team nicht
 <h4>Wiederholung</h4>
 <p>Noch mal Zusammengefasst. Git verwaltet &Auml;nderungen an Dateien. Neue Versionen einer Datei werden bei einem 'Commit' angelegt. Will ich mit mehreren Personen zusammenarbeiten, brauche ich einen zentralen Git-Server. Um meine &Auml;nderungen auf diesen Server zu &uuml;bertragen, mache ich einen 'Push'. M&ouml;chte ich &Auml;nderungen die andere gemacht haben, vom Server abrufen, mache ich einen 'Pull'. Ein 'Pull' macht automatisch einen 'Merge' mit den Dateien auf meiner Festplatte, f&uuml;hrt also den Stand auf dem Server mit dem auf meiner Festplatte zusammen.
 </p>
-<h2>Der Start</h2>
-<h3>Die Installation</h3>
+<h3>Der Start</h3>
+<h4>Die Installation</h4>
 Um mit Git zu beginnen, m&uuml;ssen wir es erst einmal installieren. Die M&ouml;glichkeiten dies zu tun, sind von Betriebsystem zu Betriebsystem unterschiedlich.
-<h4>Mac OS X</h4>
+<h5>Mac OS X</h5>
 <p><a href="http://help.github.com/mac-git-installation/">http://help.github.com/mac-git-installation/</a></p> 
-<p>F&uuml;r Mac OS X 10.4 und darunter muss Git &uuml;ber MacPorts oder Fink installiert werden, oder aus dem Sourcecode selbst kompiliert werden. F&uuml;r OS X 10.5 und dar&uuml;ber gibt es mehrere M&ouml;glichkeiten: Entweder man nutzt Fink/MacPorts, Homebrew oder den git-osx-installer. Die entsprechenden Links mit weiterf&uuml;hrenden Instruktionen findet ihr auf der oben verlinkten Seite.
+<p>F&uuml;r Mac OS X 10.4 und darunter muss Git &uuml;ber MacPorts oder Fink installiert werden, oder aus dem Sourcecode selbst kompiliert werden. F&uuml;r alle drei M&ouml;glichkeiten braucht man die OS X Developer Tools. F&uuml;r OS X 10.5 und dar&uuml;ber gibt es mehrere M&ouml;glichkeiten: Entweder man nutzt Fink/MacPorts, Homebrew oder den git-osx-installer. Die entsprechenden Links mit weiterf&uuml;hrenden Instruktionen findet ihr auf der oben verlinkten Seite.
 </p>
-<h4>Windows</h4>
+<h5>Windows</h5>
 Unter Windows gibt es zwei M&ouml;glichkeiten. Entweder man nutzt Git &uuml;ber die Linux-Emulation <a href="http://www.cygwin.com">Cygwin</a>, nutzt 
 <a href="http://code.google.com/p/msysgit/">msysGit</a> oder nutzt <a href="http://code.google.com/p/tortoisegit/">TortoiseGit</a>.
-<h4>Linux</h4>
+<h5>Linux</h5>
 <p>Entweder ihr compiliert euch Git selbst oder nutzt das Paket-Verwaltungs-System eurer Distribution. Unter Debian w&auml;re das z.B. "apt-get install git".</p>
-<h3>Einstellungen</h3>
+<h4>Einstellungen</h4>
 <p>
 Bevor wir mit irgendetwas anfangen, werden wir einige Einstellungen vornehmen. Dies geht nat&uuml;rlich auch in der Git-Bash:
 </p>
@@ -105,7 +105,7 @@ Hier setze ich Textmate als meinen Editor f&uuml;r Commits oder &Auml;hnliches. 
 Diese Einstellungen sind global und gelten f&uuml;r alle eure Repositorys. Solltet ihr in einem speziellen Repository andere Einstellungen haben wollen, lasst das '--global' weg.
 </p>
 
-<h3>Unser erstes Repository</h3>
+<h4>Unser erstes Repository</h4>
 <p>Ich werde in diesem Tutorial nicht auf GUI-Programme f&uuml;r Git eingehen, denn sie unterscheiden sich teilweise ganz bedeutend. Wenn ihr die Grundz&uuml;ge von Git versteht, werdet ihr euch aber auch in den entsprechenden GUI-Programmen zurecht finden. F&uuml;r dieses Tutorial werde ich die Git-Bash nutzen, die es sowohl unter Linux, Windows und auch Mac OS X gibt.
 </p>
 <p>
@@ -220,3 +220,118 @@ Wir h&auml;tten statt <code>gitt add style.css</code> auch <code>git add .</code
 </p>
 <h3>Die History</h3>
 <p>Was w&auml;re eine Versionsverwaltung ohne die M&ouml;glichkeit in die Vergangenheit zu gucken? Richtig: Ganz gro&szlig;er M&uuml;ll. :)</p>
+<p>Das Kommando <code>git log</code> zeigt uns die letzten Commits in unserem Repository an. Haben andere Leute mitgemacht, so werden auch die Commits von diesen angezeigt.</p>
+<code>
+<em>zeidlos:git_tutorial julius$</em> git log
+<em>commit 5e174a552f7ca353cf5a365e99263d26124411ed
+Author: zeidlos <julius@zeidlos.de>
+Date:   Wed Jan 27 01:04:48 2010 +0100
+
+    style.css hinzugefuegt
+
+commit 7ee0aef65df250ae319b27d2c6edb18beac5d504
+Author: zeidlos <julius@zeidlos.de>
+Date:   Tue Jan 26 23:19:25 2010 +0100
+
+    test
+
+commit 0e3fc88c4cca00078414244680ea26ca7494d64f
+Author: zeidlos &lt;julius@zeidlos.de&gt;
+Date:   Tue Jan 26 22:50:02 2010 +0100
+
+    index.html hinzugefuegt.
+</em>
+</code>
+<p>Das Log zeigt uns drei Commits an. Diese wurden alle vom Author 'zeidlos', also mir gemacht. Bei jedem Commit steht der Kommentar sowie eine eindeutige ID. Git nutzt keine fortlaufende Nummerierung sondern Hash-Werte als Identifizierungsmerkmal. Anhand dieser hexadezimalen Strings lassen sich die Commits auch später noch eindeutig identifizieren und referenzieren.
+</p>
+<p>
+Mit <code>git log -p</code> bekommen wir ein paar mehr Informationen:
+</p>
+<code><em>commit 7ee0aef65df250ae319b27d2c6edb18beac5d504
+Author: zeidlos &lt;julius@zeidlos.de&gt;
+Date:   Tue Jan 26 23:19:25 2010 +0100
+
+    test
+
+diff --git a/index.html b/index.html
+index efa96eb..b36c7ff 100644
+--- a/index.html
++++ b/index.html
+@@ -1,8 +1,9 @@
+ &lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;Git Test Repository&lt;/title&gt;
+<span style="color:green">+&lt;link href="style.css" rel="stylesheet" type="text/css" /&gt;</span>
+ &lt;/head&gt;
+ &lt;body&gt;
+<span style="color:red">-Dies ist ein kleines Tutorial für euch.</span>
+<span style="color:green">+Dies ist ein kleines Tutorial f&uuml;r euch.</span>
+ &lt;/body&gt;
+ &lt;/html&gt;
+</em>
+</code>
+<p>
+Die Option -p generiert einen Patch. Ein Patch ist nichts anderes als eine Textdatei mit dem Inhalt der Datei und den entsprechenden Änderungen. Ein '-' am Zeilenanfang und die rote Hervorhebung zeigt an, dass die Zeile gelöscht wurde. Gleich hinterher steht die Zeile mit einem '+' davor in grün hervorgehoben; sie ist also hinzugekommen.
+</p>
+<h3>Branchen</h3>
+<p>Branchen, nicht brunchen. Ein Branch ist kurz gesagt eine Kopie eures Repositorys. Allerdings wird nicht einfach das Repository kopiert, sondern es wird lediglich eine Art virtuelle Kopie erstellt. Die Dateien liegen also nicht doppelt auf eurer Festplatte, sondern es werden hier wieder lediglich die Änderungen gespeichert. Das mag bei kleinen Projekten nicht so das Problem sein. Geht es jedoch um größere Projekte die vielleicht auch große Bilder beeinhalten, ist man froh über jedes MB das man sparen kann.</p>
+<p>
+Wofür ist dass denn gut, fragt ihr euch bestimmt gerade. Nehmen wir an, wir wollen in unserer Website eine größere Änderung vornehmen von der wir jedoch nicht wissen ob der Kunde sie so überhaupt haben will, oder wir den Ansatz weiterverfolgen sollen. Die zu machenden Änderungen sind so gravierend, dass der aktuelle Code nicht mehr läuft, sobald wir anfangen unsere Änderungen zu machen. Wir oder Kollegen von uns wollen aber weiterhin eine Lauffähige Version des Codes haben, weil sie vielleicht an anderer Stelle etwas machen müssen. Also arbeiten wir einfach in einer Kopie weiter. Von der Kopie können wir im weiteren Verlauf noch eine Kopie machen um noch etwas anderes, basierend auf dem neuen Code auszuprobieren. Oder wir machen einen weiteren Branch vom Original weil wir einen alternativen Lösungsansatz verfolgen wollen.
+</p>
+<p>
+Hier macht Git es uns ganz einfach: <code>git branch test</code> kopiert das aktuelle Repository in einen neuen Branch mit dem Namen test. Vergesst nicht, dass es keine tatsächliche Kopie ist, sondern lediglich eine virtuelle Kopie mit den Änderungen bzw. Unterschieden zum Ursprünglichen. Der zusätzlich verbrauchte Speicherplatz ist also sehr gering und wir können nahezu beliebig viele Branches machen (Irgendwann werden euch jedoch sinnvolle Namen ausgehen).
+</p>
+<p>
+<code>git branch</code> gibt euch eine Liste mit euren Branches aus. Der Branch in dem ihr euch aktuell befindet ist mit einem * (Sternchen) markiert. Mit <code>git checkout test</code> wechselt ihr in den Branch mit dem Namen test. Nun lasst uns im Branch test etwas ändern. Wir fügen ein Bild hinzu und binden das in die HTML-Datei ein.
+</p>
+<p>
+Nun haben wir eine Änderung an der index.html gemacht sowie ein Bild im Verzeichnis liegen. Das Directorylisting sieht nun folgendermaßen aus:
+</p>
+<code><em>
+zeidlos:git_tutorial julius$</em> ls -al
+<em>total 32
+drwxr-xr-x   6 julius  staff   204 27 Jan 01:38 .
+drwxr-xr-x  22 julius  staff   748 26 Jan 21:42 ..
+drwxr-xr-x  13 julius  staff   442 27 Jan 01:39 .git
+-rw-r--r--   1 julius  staff   215 27 Jan 01:38 index.html
+-rw-r--r--   1 julius  staff  5278 17 Mär  2009 learn.github.png
+-rw-r--r--   1 julius  staff    50 26 Jan 23:06 style.css
+</em></code>
+<p>Wechseln wir nun aber mit <code>git checkout master</code> zurück zum Branch 'master' und machen ein erneutes Directorylisting, sehen wir, dass die Datei learn.github.png nicht mehr da ist. Würden wir die index.html öffnen, würden wir sehen, dass auch das Bild gar nicht eingebaut ist, sondern der Code sich noch genauso ist wie vor dem Branchen.</p>
+<p>Soweit so gut. Wir haben einen Branch erstellt und in ihm gearbeitet. Nun möchten wir unsere Änderungen, die auch funktionieren und lauffähigen Code ergeben, wieder zurück in den Branch master spielen. Denn das ist der Branch in dem der stabile Code liegt. Das machen wir mit einem Merge.</p>
+<h4>Mergen</h4>
+<p>Wir wechseln mit <code>git checkout master</code> zurück in den Branch 'master'. Führen wir nun den Befehl <code>git merge test</code> aus, bekommen wir folgendes Ergebnis:</p>
+<code><em>Updating bfda6dc..c24f5c1
+Fast-forward
+ index.html       |    1 +
+ learn.github.png |  Bin 0 -> 5278 bytes
+ 2 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 learn.github.png
+</em>
+</code>
+<p>
+Es wurde also die Datei 'index.html' geändert (eine Zeile) und die Datei learn.github.png geändert (in diesem Falle hinzugefügt). Bei dem PNG sieht man, dass Git dieses als Binary-File, also als Datei mit der man keine Vergleiche anstellen kann, da sie nicht aus Text besteht, erkannt hat.
+</p>
+<p>
+Dies war ein einfacher Merge ohne Konflikte. Git hat alles automatisch für uns gemacht und wir brauchten uns um nichts kümmern. Mit <code>git log -p</code> können wir wieder genau sehen, was geändert wurde. Nun werden wir einen Konflikt produzieren. Wir werden in beiden Branches in der gleichen Datei die gleiche Zeile editieren.
+</p>
+<p>
+Ein anschließender Merge beider Branches produziert folgenden Fehler:
+</p>
+<code><em>Auto-merging style.css
+CONFLICT (content): Merge conflict in style.css
+Automatic merge failed; fix conflicts and then commit the result.
+</em></code>
+<p>Führen wir nun <code>git mergetool</code> aus, so können wir uns ein Programm aussuchen, dass uns die zueinander in Konflikt stehenden Dateien anzeigt. Nehmen wir die Option opendiff unter OS X so wird das Programm FileMerge geöffnet (wird mit den OS X Developer Tools mitinstalliert) und wir können das Problem lösen. Wird das Programm geschlossen, schreibt git die neue Datei ins Dateisystem, und schreibt eine weitere Datei mit dem Suffix '.orig'. In dieser Datei sehen wir noch mal was das Problem verursacht hat und können ggf. noch einmal nachsteuern.</p>
+<code><em>body {
+  color:teal;
+<<<<<<< HEAD
+  background-color:white;
+=======
+  background-color:gray;
+>>>>>>> test
+}
+</em></code>
+<p>Wichtig zu wissen ist, dass Git nach einem Merge automatisch ein Commit macht. Dies kann man mit einer speziellen Option verhindern. Welche Option das ist, muss man nicht wissen, man muss wie immer nur wissen, wo es steht. Unix/Linux-Systeme haben so genannte Man-Pages. Das sind ganz tolle Dinger die man sich auch in der Shell angucken kann. Tippt man <code>git merge --help</code> ein, so bekommt man die Hilfe Seite für den 'git merge' Befehl mit all seinen Optionen, Varianten und sonstigen Beschreibungen. Das gleiche gilt funktioniert natürlich auch für <code>git --help</code> oder <code>git branch --help</code> usw. Navigieren tut man in diesen Man-Pages mit den Pfeil- bzw. Bildauf- und Bildab-Tasten. Verlassen kann man die Man-Pages mit einem Druck auf die Taste 'q'.
+</p>
+<p>Das Ganze sieht sicherlich etwas gewöhnungsbedürftig aus, ist aber ungemein hilfreich. - Nicht nur im Zusammenhang mit Git, sondern auch mit allen anderen Dingen die sich in einer Shell abspielen. Tippt doch Spaßenshalber mal <code>man say</code> ein.</p>
