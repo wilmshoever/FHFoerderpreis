@@ -336,10 +336,47 @@ Automatic merge failed; fix conflicts and then commit the result.
 </p>
 <p>Das Ganze sieht sicherlich etwas gew&ouml;hnungsbed&uuml;rftig aus, ist aber ungemein hilfreich. - Nicht nur im Zusammenhang mit Git, sondern auch mit allen anderen Dingen die sich in einer Shell abspielen. Tippt doch Spa&szlig;enshalber mal <code>man say</code> ein.</p>
 
-<h2>Das eingemachte – Es geht los!</h2>
-<p>Wichtig für diesen Teil ist, dass ihr eure Git-Installation eingerichtet habt und das Tutorial bis hier hin durchgearbeitet habt, damit ihr soweit damit umgehen könnt. Ihr habt per <code>git config</code> eure globalen Einstellungen gemacht, habt die Option die LF auf CRLF ändert, gesetzt, und euch mit Commits auseinander gesetzt und es praktisch ausprobiert. Wenn nicht, geht die vorherigen Kapitel bitte noch einmal druch.</p>
-<p>Nun legt den Ordner an in dem euer Repository liegen soll und initialisiert es mit <code>git init</code>. <code>git remote add origin git@github.com:zeidlos/FHFoerderpreis.git</code> fügt eurem Repository den Git-Server hinzu mit dem wir arbeiten wollen. In diesem Falle Github. Statt 'origin' könnt ihr auch etwas anderes nutzen (z.B. Github), dieser Begriff hat sich jedoch eingebürgert.</p>
-<p>Das Kommando <code>pull</code> (pull = ziehen) holt etwas vom soeben eingestellten Server. <code>git pull origin master</code> holt downloaded den Branch 'master' von der Quelle 'origin'. Der Master Branch ist immer derjenige in dem der stabile Code liegt. Hier sind keine Experimente oder halbfertige Module zu erwarten. Bitte arbeitet auch lokal nicht im Branch 'master', sondern legt euch mit <code>git branch euername</code> einen neuen Branch an in dem ihr arbeitet und wechselt in den Branch mit <code>git checkout euername</code>. Hier könnt ihr nun arbeiten, Dateien ändern, committen, und so weiter.</p>
+<h2>Das eingemachte &ndash; Es geht los!</h2>
+<p>Wichtig f&uuml;r diesen Teil ist, dass ihr eure Git-Installation eingerichtet habt und das Tutorial bis hier hin durchgearbeitet habt, damit ihr soweit damit umgehen k&ouml;nnt. Ihr habt per <code>git config</code> eure globalen Einstellungen gemacht, habt die Option die LF auf CRLF &auml;ndert, gesetzt, und euch mit Commits auseinander gesetzt und es praktisch ausprobiert. Wenn nicht, geht die vorherigen Kapitel bitte noch einmal druch.</p>
+<p>Nun legt den Ordner an in dem euer Repository liegen soll und initialisiert es mit <code>git init</code>. <code>git remote add origin git@github.com:zeidlos/FHFoerderpreis.git</code> f&uuml;gt eurem Repository den Git-Server hinzu mit dem wir arbeiten wollen. In diesem Falle Github. Statt &#x27;origin&#x27; k&ouml;nnt ihr auch etwas anderes nutzen (z.B. Github), dieser Begriff hat sich jedoch eingeb&uuml;rgert.</p>
+<p>Das Kommando <code>pull</code> (pull = ziehen) holt etwas vom soeben eingestellten Server. <code>git pull origin master</code> downloaded (zieht) den Branch &#x27;master&#x27; von der Quelle &#x27;origin&#x27;. Der Master Branch ist immer derjenige in dem der stabile Code liegt. Hier sind keine Experimente oder halbfertige Module zu erwarten. Bitte arbeitet auch lokal nicht im Branch &#x27;master&#x27;, sondern legt euch mit <code>git branch euername</code> einen neuen Branch an in dem ihr arbeitet und wechselt in den Branch mit <code>git checkout euername</code>. Hier k&ouml;nnt ihr nun arbeiten, Dateien &auml;ndern, committen, und so weiter.</p>
 <p>
-Möchtet ihr nun eure Änderungen mit anderen Teilen, könnt ihr mit <code>git push origin euername</code> auf dem Gitserver einen neuen Branch auf dem Server anlegen. Diesen Branch können alle anderen sehen, und mit ihm mergen. Hast du also eine tolle Änderung gebaut, pushst du diese in deinen remote (auf dem Server liegenden) Branch.</p> 
-<p>Wenn du zum Beispiel ein neues Modul gebaut, oder Texte geändert hast, also Dinge die niemand anderen stören, kannst du auch mit <code>git checkout master</code> und <code>git merge meinname</code> den Branch 'master' mit deinen Änderungen ergänzen. Ein <code>git push origin master</code> läd die gemachten Änderungen nun auch in den remote Branch 'master' hoch. Andernfalls kannst du auch jemanden, der sich dafür verantwortlich fühlt, z.B. mich, damit beauftragen, deine Änderungen in den Branch 'master' zu mergen.</p>
+M&ouml;chtet ihr nun eure &Auml;nderungen mit anderen Teilen, k&ouml;nnt ihr mit <code>git push origin euername</code> auf dem Gitserver einen neuen Branch auf dem Server anlegen. Diesen Branch k&ouml;nnen alle anderen sehen, und mit ihm mergen. Hast du also eine tolle &Auml;nderung gebaut, pushst du diese in deinen remote (auf dem Server liegenden) Branch.</p> 
+<p>Wenn du zum Beispiel ein neues Modul gebaut, oder Texte ge&auml;ndert hast, also Dinge die niemand anderen st&ouml;ren, kannst du auch mit <code>git checkout master</code> und <code>git merge meinname</code> den Branch &#x27;master&#x27; mit deinen &Auml;nderungen erg&auml;nzen. Ein <code>git push origin master</code> l&auml;d die gemachten &Auml;nderungen nun auch in den remote Branch &#x27;master&#x27; hoch. Andernfalls kannst du auch jemanden, der sich daf&uuml;r verantwortlich f&uuml;hlt, z.B. mich, damit beauftragen, deine &Auml;nderungen in den Branch &#x27;master&#x27; zu mergen.</p>
+<p>
+Wenn Daniela eine &Auml;nderung gemacht hat, die jedoch noch nicht im remote Branch &#x27;master&#x27; steht, kann ich mit dem Befehl <code>git pull origin daniela</code> mir die &Auml;nderungen von Daniela (in der Annahme dass Danielas remote Branch &#x27;daniela&#x27; heisst) holen, und mit ihnen arbeiten.
+</p>
+<p>
+Bevor ich anfange zu arbeiten, gucke ich, ob sich im remote Branch &#x27;master&#x27; etwas ge&auml;ndert habe und merge die &Auml;nderungen ggf. in meinen privaten Branch.</p>
+<p>
+Langsam wiederholt sich alles, aber ich erkl&auml;re noch einmal den Ablauf:
+</p>
+<code>git checkout master</code>
+<p>In den lokalen Branch &#x27;master&#x27; wechseln</p>
+<code>git pull origin master</code>
+<p>Die &Auml;nderungen vom remote Branch &#x27;master&#x27; ziehen.</p>
+<code>git checkout zeidlos</code>
+<p>In den eigenen lokalen Branch wechseln.</p>
+<code>git merge master</code>
+<p>Den Branch &#x27;master&#x27; mit dem Branch vergleichen in dem man sich gerade befindet und eventuelle &Auml;nderungen vornehmen.</p>
+<p>Diese Prozedur sollte man regelm&auml;&szlig;ig wiederholen. Je &ouml;fter alle ihre Daten auf dem Server aktualisieren, desto einfacher ist es, einen Merge zu machen.</p>
+<p>
+Wer nur kleine &Auml;nderungen macht die nichts kaputt machen, k&ouml;nnt ihr diese auch im Branch &#x27;master&#x27; durchf&uuml;hren. Will ich also einen Text erg&auml;nzen, oder die Rechtschreibung korrigieren, wechsle ich in den Branch &#x27;master&#x27;, &auml;ndere den Text, committe die &Auml;nderungen und pushe sie auf den Remote Branch. So muss ich keinen Merge mit meinem eigenen Branch machen in dem ich gerade an einem gro&szlig;en neuen, halbfertigen Feature arbeite und ich noch keine &Auml;nderungen davon in den Master mergen m&ouml;chte.
+</p>
+<p>
+Das Ganze mag am Anfang etwas kompliziert, aufgeblasen und merkw&uuml;rdig klingen. Sobald ihr aber die ersten Gehversuche hinter euch habt, werdet ihr merken, dass dies der einzige und ultimative Weg ist, mit anderen an einem Projekt zusammen zu arbeiten. Ihr k&ouml;nnt sehen, wer was aus welchem Grund ge&auml;ndert hat, und wisst so, was ihr mit den &Auml;nderungen anfangen sollt. Ihr k&ouml;nnt die &Auml;nderungen auch direkt &uuml;bernehmen und braucht euch nicht darum k&uuml;mmern, die Dateien von euch mit den soeben auf einem USB-Stick erhaltenen per Hand zu vergleichen. Ihr braucht auch nicht tausende Kopien von dem Projektordner aufbewahren, nur um die alten St&auml;nde zu sichern. Um all das k&uuml;mmert sich Git!</p>
+<p>
+Zum Schluss noch ein paar Links um weiterf&uuml;hrende Dinge nachlesen zu k&ouml;nnen oder sie noch mal von jemand anderem beschrieben zu bekommen. :)
+
+<a href="http://learn.github.com">http://learn.github.com</a> (engl.) Tutorial f&uuml;r Einsteiger
+<a href="http://help.github.com">http://help.github.com</a> (engl.) Hilfe bei Installation, SSH-Keys, uvm.
+<a href="http://github.com/guides/home">http://github.com/guides/home</a> (engl.) Weiterf&uuml;hrendes
+<a href="http://git-scm.com/documentation">http://git-scm.com/documentation</a> (engl.) Seite mit vielen Links zu diversen Themen.
+<a href="http://github.com/guides/git-cheat-sheet">http://github.com/guides/git-cheat-sheet</a> (engl.) Cheat-Sheet
+<a href="http://ktown.kde.org/%7Ezrusin/git/git-cheat-sheet-large.png">http://ktown.kde.org/%7Ezrusin/git/git-cheat-sheet-large.png</a> (engl.) Noch ein Cheat-Sheet.
+<a href="http://progit.org/book/">Progit &ndash; Ein Buch &uuml;ber git.</a> (engl.)
+<a href="http://hoth.entp.com/output/git_for_designers.html">Git f&uuml;r Designer. Noch ein Anf&auml;ngertutorial</a> (engl.)
+<a href="http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html</a> (engl.) Offizielles Git Tutorial.
+<a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a> (engl.) Git in 20 Kommandos.
+<a href="http://www.spheredev.org/wiki/Git_for_the_lazy">http://www.spheredev.org/wiki/Git_for_the_lazy</a> (engl.) Git f&uuml;r Faule. :)
+<a href="http://de.gitready.com/">http://de.gitready.com/</a> (deutsch) Deutsche Seite mit Tipps und Hinweisen zum Thema Git.
