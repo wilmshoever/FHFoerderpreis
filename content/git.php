@@ -41,10 +41,10 @@ Frage ich nun den Server nach &Auml;nderungen, schickt er mir die &Auml;nderung 
 Gibt es keine Konflikte, &uuml;bernimmt Git die &Auml;nderungen ganz einfach ohne gro&szlig;artige Nachrichten. Erinnert ihr euch an den Kommentar beim Committen? Diese Kommentare werden auch mit &uuml;bertragen. Bekomme ich also &Auml;nderungen vom Server, kann ich anhand der Commit-Message sehen, was genau mein Kollege ge&auml;ndert hat und was er sich dabei gedacht hat. Arbeite ich mit mehreren Leuten am gleichen Projekt, sehe ich auch wer die &Auml;nderungen gemacht hat.
 </p>
 <p>
-In der Praxis kommt es recht selten zu Konflikten, da die Aufgaben im Team nicht die gleichen sind. Der eine k&uuml;mmert sich um ein spezielles Modul, &auml;ndert in der entsprechenden Datei etwas oder f&uuml;gt ein oder mehrere neue Dateien hinzu. Vielleicht &auml;ndert er auch im zentralen Stylesheet etwas, oder f&uuml;gt Klassen oder ID's hinzu. Die Wahrscheinlichkeit dass jemand die gleichen Klassen hinzuf&uuml;gt oder genau die gleiche Datei neu anlegt ist recht gering. Jemand anderes k&uuml;mmert sich um die &Uuml;berarbeitung der Bilder und wieder jemand anderes k&uuml;mmert sich um Textkorrekturen.
+In der Praxis kommt es recht selten zu Konflikten, da die Aufgaben im Team nicht die gleichen sind. Der eine k&uuml;mmert sich um ein spezielles Modul, &auml;ndert in der entsprechenden Datei etwas oder f&uuml;gt ein oder mehrere neue Dateien hinzu. Vielleicht &auml;ndert er auch im zentralen Stylesheet etwas, oder f&uuml;gt Klassen oder ID&#x27;s hinzu. Die Wahrscheinlichkeit dass jemand die gleichen Klassen hinzuf&uuml;gt oder genau die gleiche Datei neu anlegt ist recht gering. Jemand anderes k&uuml;mmert sich um die &Uuml;berarbeitung der Bilder und wieder jemand anderes k&uuml;mmert sich um Textkorrekturen.
 </p>
 <h4>Wiederholung</h4>
-<p>Noch mal Zusammengefasst. Git verwaltet &Auml;nderungen an Dateien. Neue Versionen einer Datei werden bei einem 'Commit' angelegt. Will ich mit mehreren Personen zusammenarbeiten, brauche ich einen zentralen Git-Server. Um meine &Auml;nderungen auf diesen Server zu &uuml;bertragen, mache ich einen 'Push'. M&ouml;chte ich &Auml;nderungen die andere gemacht haben, vom Server abrufen, mache ich einen 'Pull'. Ein 'Pull' macht automatisch einen 'Merge' mit den Dateien auf meiner Festplatte, f&uuml;hrt also den Stand auf dem Server mit dem auf meiner Festplatte zusammen.
+<p>Noch mal Zusammengefasst. Git verwaltet &Auml;nderungen an Dateien. Neue Versionen einer Datei werden bei einem &#x27;Commit&#x27; angelegt. Will ich mit mehreren Personen zusammenarbeiten, brauche ich einen zentralen Git-Server. Um meine &Auml;nderungen auf diesen Server zu &uuml;bertragen, mache ich einen &#x27;Push&#x27;. M&ouml;chte ich &Auml;nderungen die andere gemacht haben, vom Server abrufen, mache ich einen &#x27;Pull&#x27;. Ein &#x27;Pull&#x27; macht automatisch einen &#x27;Merge&#x27; mit den Dateien auf meiner Festplatte, f&uuml;hrt also den Stand auf dem Server mit dem auf meiner Festplatte zusammen.
 </p>
 <h3>Der Start</h3>
 <h4>Die Installation</h4>
@@ -57,7 +57,7 @@ Um mit Git zu beginnen, m&uuml;ssen wir es erst einmal installieren. Die M&ouml;
 Unter Windows gibt es zwei M&ouml;glichkeiten. Entweder man nutzt Git &uuml;ber die Linux-Emulation <a href="http://www.cygwin.com">Cygwin</a>, nutzt 
 <a href="http://code.google.com/p/msysgit/">msysGit</a> oder nutzt <a href="http://code.google.com/p/tortoisegit/">TortoiseGit</a>.
 <h5>Linux</h5>
-<p>Entweder ihr compiliert euch Git selbst oder nutzt das Paket-Verwaltungs-System eurer Distribution. Unter Debian w&auml;re das z.B. "apt-get install git".</p>
+<p>Entweder ihr compiliert euch Git selbst oder nutzt das Paket-Verwaltungs-System eurer Distribution. Unter Debian w&auml;re das z.B. &quot;apt-get install git&quot;.</p>
 <h4>Einstellungen</h4>
 <p>
 Bevor wir mit irgendetwas anfangen, werden wir einige Einstellungen vornehmen. Dies geht nat&uuml;rlich auch in der Git-Bash:
@@ -102,7 +102,7 @@ git config --global core.editor=mate -w
 Hier setze ich Textmate als meinen Editor f&uuml;r Commits oder &Auml;hnliches. Ihr k&ouml;nnt diese Option ignorieren oder den Editor eurer Wahl eintragen.
 </p>
 <p>
-Diese Einstellungen sind global und gelten f&uuml;r alle eure Repositorys. Solltet ihr in einem speziellen Repository andere Einstellungen haben wollen, lasst das '--global' weg.
+Diese Einstellungen sind global und gelten f&uuml;r alle eure Repositorys. Solltet ihr in einem speziellen Repository andere Einstellungen haben wollen, lasst das &#x27;--global&#x27; weg.
 </p>
 
 <h4>Unser erstes Repository</h4>
@@ -112,7 +112,7 @@ Diese Einstellungen sind global und gelten f&uuml;r alle eure Repositorys. Sollt
 Mit dem <code>cd</code>-Befehl wechseln wir in das gew&uuml;nschte Verzeichnis. In meinem Fall habe ich mit dem Befehl <code>mkdir /Users/julius/Daten/websites/git_tutorial</code> den Ordner git_tutorial in dem Ordner in dem meine ganzen Webprojekte liegen, angelegt. In diesen Ordner habe ich auch eine HTML-Datei kopiert, mit der wir f&uuml;r den Anfang arbeiten werden.
 </p>
 <p>
-Ein Git-Repository besteht aus einem Ordner namens '.git'. Der Punkt vor dem Ordnernamen versteckt diesen in unixoiden Betriebssystemen wie Linux, Unix oder Mac OS X. Git legt nicht, wie z.B. SVN in jedem Verzeichnis einen Ordner an, sondern lediglich im Hauptordner des Repositorys. M&ouml;chtet ihr das Repository l&ouml;schen, l&ouml;scht einfach den Ordner '.git' und alles ist weg. :)
+Ein Git-Repository besteht aus einem Ordner namens &#x27;.git&#x27;. Der Punkt vor dem Ordnernamen versteckt diesen in unixoiden Betriebssystemen wie Linux, Unix oder Mac OS X. Git legt nicht, wie z.B. SVN in jedem Verzeichnis einen Ordner an, sondern lediglich im Hauptordner des Repositorys. M&ouml;chtet ihr das Repository l&ouml;schen, l&ouml;scht einfach den Ordner &#x27;.git&#x27; und alles ist weg. :)
 </p>
 <code>git init</code> 
 <p>initialisiert uns ein neues Git-Repository in dem aktuellen Verzeichnis.
@@ -131,10 +131,10 @@ Unser erstes Git-Repository wurde initialisiert. Wir k&ouml;nnen es nun nutzen. 
 # Initial commit
 #
 # Untracked files:
-#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
 #
 #	index.html
-nothing added to commit but untracked files present (use "git add" to track)
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
 </em>
 </code>
 <p>
@@ -153,18 +153,18 @@ In diesem Falle meldet Git uns, dass die Zeilenendzeichen von LF auf CRLF (ihr e
 # Initial commit
 #
 # Changes to be committed:
-#   (use "git rm --cached &lt;file&gt;..." to unstage)
+#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
 #
 #	new file:   index.html
 #
 </em>
 </code>
 <p>
-Ein erneuter 'status' zeigt uns an, dass nun eine neue Datei namens index.html vorhanden ist. Diese werden wir als n&auml;chstes committen.
+Ein erneuter &#x27;status&#x27; zeigt uns an, dass nun eine neue Datei namens index.html vorhanden ist. Diese werden wir als n&auml;chstes committen.
 </p>
 <h4>Der erste Commit</h4>
 <code>
-<em>zeidlos:git_tutorial julius$</em> git commit -m 'index.html hinzugefuegt.'
+<em>zeidlos:git_tutorial julius$</em> git commit -m &#x27;index.html hinzugefuegt.&#x27;
 <em>[master (root-commit) 0e3fc88] index.html hinzugefuegt.
 warning: LF will be replaced by CRLF in index.html
  1 files changed, 8 insertions(+), 0 deletions(-)
@@ -172,10 +172,10 @@ warning: LF will be replaced by CRLF in index.html
 </em>
 </code>
 <p>
-mit <code>git commit -m 'Kommentar'</code> haben wir die gemachten &Auml;nderungen in unser Repository geschrieben. Lassen wir den Flag -m und den Kommentar (Eigentlich bedeutet der Flag '-m' Message. Der Verst&auml;ndlichkeit halber schreibe ich statt Nachricht jedoch Kommentar.) weg, &ouml;ffnet sich ein Texteditor (z.B. Vim) in den wir den Kommentar eintragen m&uuml;ssen. Ein Commit ohne Kommentar ist nicht m&ouml;glich.
+mit <code>git commit -m &#x27;Kommentar&#x27;</code> haben wir die gemachten &Auml;nderungen in unser Repository geschrieben. Lassen wir den Flag -m und den Kommentar (Eigentlich bedeutet der Flag &#x27;-m&#x27; Message. Der Verst&auml;ndlichkeit halber schreibe ich statt Nachricht jedoch Kommentar.) weg, &ouml;ffnet sich ein Texteditor (z.B. Vim) in den wir den Kommentar eintragen m&uuml;ssen. Ein Commit ohne Kommentar ist nicht m&ouml;glich.
 </p>
 <p>
-Git meldet uns nun, dass 'index.html' hinzugef&uuml;gt wurde. Die ID des Commits ist 0e3fc88, und LF wurde durch CRLF ersetzt. Es wurde eine Datei ge&auml;ndert, 8 Zeilen hinzugef&uuml;gt, 0 gel&ouml;scht.
+Git meldet uns nun, dass &#x27;index.html&#x27; hinzugef&uuml;gt wurde. Die ID des Commits ist 0e3fc88, und LF wurde durch CRLF ersetzt. Es wurde eine Datei ge&auml;ndert, 8 Zeilen hinzugef&uuml;gt, 0 gel&ouml;scht.
 </p>
 <p>
 Ein erneutes <code>git status</code> zeigt uns, dass wir uns im branch master befinden und es keine &Auml;nderungen gibt.
@@ -186,22 +186,22 @@ nothing to commit (working directory clean)
 </em></code>
 <h4>&Auml;nderungen</h4>
 <p>
-Wir haben nun unseren ersten Commit hinter uns und m&uuml;ssen in der Datei 'index.html' etwas &auml;ndern. Ausserdem legen wir die Datei style.css an. Nach der &Auml;nderung machen fragen wir Git ein weiteres Mal nach einem Status:
+Wir haben nun unseren ersten Commit hinter uns und m&uuml;ssen in der Datei &#x27;index.html&#x27; etwas &auml;ndern. Ausserdem legen wir die Datei style.css an. Nach der &Auml;nderung machen fragen wir Git ein weiteres Mal nach einem Status:
 </p>
 <code>
 <em>
 # On branch master
 # Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
 #
 #	modified:   index.html
 #
 # Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
+#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
 #
 #	style.css
-no changes added to commit (use "git add" and/or "git commit -a")
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </em>
 </code>
 <p>
@@ -210,10 +210,10 @@ Git zeigt uns, dass wir &Auml;nderungen in der index.html haben, und die style.c
 <h4>Die Staging-Area</h4>
 <p>Die Staging-Area k&ouml;nnt ihr euch als Briefumschlag vorstellen, das Repository als Archiv. Macht ihr ein Commit, ist das, als wenn ihr einen Briefumschlag voller &Auml;nderungen per Hauspost an den Archivar schickt. Daf&uuml;r m&uuml;sst ihr allerdings die &Auml;nderungen vorher in den Briefumschlag stecken. Das mag sich jetzt vielleicht etwas umst&auml;ndlich anh&ouml;ren, aber ihr wollt vielleicht nicht alle &Auml;nderungen die ihr gemacht habt, auf einmal committen oder einige &Auml;nderungen auch erst einmal gar nicht.
 </p>
-<p>Mit <code>git add index.html</code> stecke ich die &Auml;nderungen der Datei 'index.html' in den Briefumschlag um ihn an den Archivar schicken zu k&ouml;nnen. In diesem Falle m&ouml;chte ich aber auch die style.css committen. Nun habe ich zwei M&ouml;glichkeiten: Entweder ich nutze <code>git add .</code> um alle Dateien die ich ge&auml;ndert oder hinzugef&uuml;gt habe, in den Briefumschlag zu stecken, oder ich nutze <code>git commit -am 'Kommentar'</code>. Das zus&auml;tzliche 'a' in den Flags legt automatisch die &Auml;nderungen aller bekannten Dateien in den Briefumschlag. Anders als <code>git add .</code> bleibt die style.css hiervon unber&uuml;hrt, da sich '-a' lediglich die bereits bekannten Dateien bezieht. Allerdings l&ouml;scht die Option '-a' auch Dateien, die bereits getrackt werden, jedoch von euch per Hand gel&ouml;scht wurden.
+<p>Mit <code>git add index.html</code> stecke ich die &Auml;nderungen der Datei &#x27;index.html&#x27; in den Briefumschlag um ihn an den Archivar schicken zu k&ouml;nnen. In diesem Falle m&ouml;chte ich aber auch die style.css committen. Nun habe ich zwei M&ouml;glichkeiten: Entweder ich nutze <code>git add .</code> um alle Dateien die ich ge&auml;ndert oder hinzugef&uuml;gt habe, in den Briefumschlag zu stecken, oder ich nutze <code>git commit -am &#x27;Kommentar&#x27;</code>. Das zus&auml;tzliche &#x27;a&#x27; in den Flags legt automatisch die &Auml;nderungen aller bekannten Dateien in den Briefumschlag. Anders als <code>git add .</code> bleibt die style.css hiervon unber&uuml;hrt, da sich &#x27;-a&#x27; lediglich die bereits bekannten Dateien bezieht. Allerdings l&ouml;scht die Option &#x27;-a&#x27; auch Dateien, die bereits getrackt werden, jedoch von euch per Hand gel&ouml;scht wurden.
 </p>
 <p>
-M&ouml;chten wir also die &Auml;nderungen der index.html als auch die neue style.css committen, m&uuml;ssen wir erst mit <code>git add style.css</code> die style.css hinzuf&uuml;gen und dann mit <code>git commit -am 'Kommentar'</code> den Commit machen, wobei die bisher nicht in den Briefumschlag gelegten &Auml;nderungen der index.html automatisch (wegen dem Flag -a) committet werden.
+M&ouml;chten wir also die &Auml;nderungen der index.html als auch die neue style.css committen, m&uuml;ssen wir erst mit <code>git add style.css</code> die style.css hinzuf&uuml;gen und dann mit <code>git commit -am &#x27;Kommentar&#x27;</code> den Commit machen, wobei die bisher nicht in den Briefumschlag gelegten &Auml;nderungen der index.html automatisch (wegen dem Flag -a) committet werden.
 </p>
 <p>
 Wir h&auml;tten statt <code>gitt add style.css</code> auch <code>git add .</code> schreiben k&ouml;nnen. Dies h&auml;tte jedoch dazu gef&uuml;hrt, dass wir wirklich jede, bisher noch nicht im Repository erfasste Datei, also z.B. auch meine passwoerter.html, commitet worden w&auml;re.
@@ -224,13 +224,13 @@ Wir h&auml;tten statt <code>gitt add style.css</code> auch <code>git add .</code
 <code>
 <em>zeidlos:git_tutorial julius$</em> git log
 <em>commit 5e174a552f7ca353cf5a365e99263d26124411ed
-Author: zeidlos <julius@zeidlos.de>
+Author: zeidlos &lt;julius@zeidlos.de&gt;
 Date:   Wed Jan 27 01:04:48 2010 +0100
 
     style.css hinzugefuegt
 
 commit 7ee0aef65df250ae319b27d2c6edb18beac5d504
-Author: zeidlos <julius@zeidlos.de>
+Author: zeidlos &lt;julius@zeidlos.de&gt;
 Date:   Tue Jan 26 23:19:25 2010 +0100
 
     test
@@ -242,7 +242,7 @@ Date:   Tue Jan 26 22:50:02 2010 +0100
     index.html hinzugefuegt.
 </em>
 </code>
-<p>Das Log zeigt uns drei Commits an. Diese wurden alle vom Author 'zeidlos', also mir gemacht. Bei jedem Commit steht der Kommentar sowie eine eindeutige ID. Git nutzt keine fortlaufende Nummerierung sondern Hash-Werte als Identifizierungsmerkmal. Anhand dieser hexadezimalen Strings lassen sich die Commits auch später noch eindeutig identifizieren und referenzieren.
+<p>Das Log zeigt uns drei Commits an. Diese wurden alle vom Author &#x27;zeidlos&#x27;, also mir gemacht. Bei jedem Commit steht der Kommentar sowie eine eindeutige ID. Git nutzt keine fortlaufende Nummerierung sondern Hash-Werte als Identifizierungsmerkmal. Anhand dieser hexadezimalen Strings lassen sich die Commits auch sp&auml;ter noch eindeutig identifizieren und referenzieren.
 </p>
 <p>
 Mit <code>git log -p</code> bekommen wir ein paar mehr Informationen:
@@ -261,31 +261,31 @@ index efa96eb..b36c7ff 100644
  &lt;html&gt;
  &lt;head&gt;
  &lt;title&gt;Git Test Repository&lt;/title&gt;
-<span style="color:green">+&lt;link href="style.css" rel="stylesheet" type="text/css" /&gt;</span>
+<span style="color:green">+&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</span>
  &lt;/head&gt;
  &lt;body&gt;
-<span style="color:red">-Dies ist ein kleines Tutorial für euch.</span>
+<span style="color:red">-Dies ist ein kleines Tutorial f&uuml;r euch.</span>
 <span style="color:green">+Dies ist ein kleines Tutorial f&uuml;r euch.</span>
  &lt;/body&gt;
  &lt;/html&gt;
 </em>
 </code>
 <p>
-Die Option -p generiert einen Patch. Ein Patch ist nichts anderes als eine Textdatei mit dem Inhalt der Datei und den entsprechenden Änderungen. Ein '-' am Zeilenanfang und die rote Hervorhebung zeigt an, dass die Zeile gelöscht wurde. Gleich hinterher steht die Zeile mit einem '+' davor in grün hervorgehoben; sie ist also hinzugekommen.
+Die Option -p generiert einen Patch. Ein Patch ist nichts anderes als eine Textdatei mit dem Inhalt der Datei und den entsprechenden &Auml;nderungen. Ein &#x27;-&#x27; am Zeilenanfang und die rote Hervorhebung zeigt an, dass die Zeile gel&ouml;scht wurde. Gleich hinterher steht die Zeile mit einem &#x27;+&#x27; davor in gr&uuml;n hervorgehoben; sie ist also hinzugekommen.
 </p>
 <h3>Branchen</h3>
-<p>Branchen, nicht brunchen. Ein Branch ist kurz gesagt eine Kopie eures Repositorys. Allerdings wird nicht einfach das Repository kopiert, sondern es wird lediglich eine Art virtuelle Kopie erstellt. Die Dateien liegen also nicht doppelt auf eurer Festplatte, sondern es werden hier wieder lediglich die Änderungen gespeichert. Das mag bei kleinen Projekten nicht so das Problem sein. Geht es jedoch um größere Projekte die vielleicht auch große Bilder beeinhalten, ist man froh über jedes MB das man sparen kann.</p>
+<p>Branchen, nicht brunchen. Ein Branch ist kurz gesagt eine Kopie eures Repositorys. Allerdings wird nicht einfach das Repository kopiert, sondern es wird lediglich eine Art virtuelle Kopie erstellt. Die Dateien liegen also nicht doppelt auf eurer Festplatte, sondern es werden hier wieder lediglich die &Auml;nderungen gespeichert. Das mag bei kleinen Projekten nicht so das Problem sein. Geht es jedoch um gr&ouml;&szlig;ere Projekte die vielleicht auch gro&szlig;e Bilder beeinhalten, ist man froh &uuml;ber jedes MB das man sparen kann.</p>
 <p>
-Wofür ist dass denn gut, fragt ihr euch bestimmt gerade. Nehmen wir an, wir wollen in unserer Website eine größere Änderung vornehmen von der wir jedoch nicht wissen ob der Kunde sie so überhaupt haben will, oder wir den Ansatz weiterverfolgen sollen. Die zu machenden Änderungen sind so gravierend, dass der aktuelle Code nicht mehr läuft, sobald wir anfangen unsere Änderungen zu machen. Wir oder Kollegen von uns wollen aber weiterhin eine Lauffähige Version des Codes haben, weil sie vielleicht an anderer Stelle etwas machen müssen. Also arbeiten wir einfach in einer Kopie weiter. Von der Kopie können wir im weiteren Verlauf noch eine Kopie machen um noch etwas anderes, basierend auf dem neuen Code auszuprobieren. Oder wir machen einen weiteren Branch vom Original weil wir einen alternativen Lösungsansatz verfolgen wollen.
+Wof&uuml;r ist dass denn gut, fragt ihr euch bestimmt gerade. Nehmen wir an, wir wollen in unserer Website eine gr&ouml;&szlig;ere &Auml;nderung vornehmen von der wir jedoch nicht wissen ob der Kunde sie so &uuml;berhaupt haben will, oder wir den Ansatz weiterverfolgen sollen. Die zu machenden &Auml;nderungen sind so gravierend, dass der aktuelle Code nicht mehr l&auml;uft, sobald wir anfangen unsere &Auml;nderungen zu machen. Wir oder Kollegen von uns wollen aber weiterhin eine Lauff&auml;hige Version des Codes haben, weil sie vielleicht an anderer Stelle etwas machen m&uuml;ssen. Also arbeiten wir einfach in einer Kopie weiter. Von der Kopie k&ouml;nnen wir im weiteren Verlauf noch eine Kopie machen um noch etwas anderes, basierend auf dem neuen Code auszuprobieren. Oder wir machen einen weiteren Branch vom Original weil wir einen alternativen L&ouml;sungsansatz verfolgen wollen.
 </p>
 <p>
-Hier macht Git es uns ganz einfach: <code>git branch test</code> kopiert das aktuelle Repository in einen neuen Branch mit dem Namen test. Vergesst nicht, dass es keine tatsächliche Kopie ist, sondern lediglich eine virtuelle Kopie mit den Änderungen bzw. Unterschieden zum Ursprünglichen. Der zusätzlich verbrauchte Speicherplatz ist also sehr gering und wir können nahezu beliebig viele Branches machen (Irgendwann werden euch jedoch sinnvolle Namen ausgehen).
+Hier macht Git es uns ganz einfach: <code>git branch test</code> kopiert das aktuelle Repository in einen neuen Branch mit dem Namen test. Vergesst nicht, dass es keine tats&auml;chliche Kopie ist, sondern lediglich eine virtuelle Kopie mit den &Auml;nderungen bzw. Unterschieden zum Urspr&uuml;nglichen. Der zus&auml;tzlich verbrauchte Speicherplatz ist also sehr gering und wir k&ouml;nnen nahezu beliebig viele Branches machen (Irgendwann werden euch jedoch sinnvolle Namen ausgehen).
 </p>
 <p>
-<code>git branch</code> gibt euch eine Liste mit euren Branches aus. Der Branch in dem ihr euch aktuell befindet ist mit einem * (Sternchen) markiert. Mit <code>git checkout test</code> wechselt ihr in den Branch mit dem Namen test. Nun lasst uns im Branch test etwas ändern. Wir fügen ein Bild hinzu und binden das in die HTML-Datei ein.
+<code>git branch</code> gibt euch eine Liste mit euren Branches aus. Der Branch in dem ihr euch aktuell befindet ist mit einem * (Sternchen) markiert. Mit <code>git checkout test</code> wechselt ihr in den Branch mit dem Namen test. Nun lasst uns im Branch test etwas &auml;ndern. Wir f&uuml;gen ein Bild hinzu und binden das in die HTML-Datei ein.
 </p>
 <p>
-Nun haben wir eine Änderung an der index.html gemacht sowie ein Bild im Verzeichnis liegen. Das Directorylisting sieht nun folgendermaßen aus:
+Nun haben wir eine &Auml;nderung an der index.html gemacht sowie ein Bild im Verzeichnis liegen. Das Directorylisting sieht nun folgenderma&szlig;en aus:
 </p>
 <code><em>
 zeidlos:git_tutorial julius$</em> ls -al
@@ -294,44 +294,44 @@ drwxr-xr-x   6 julius  staff   204 27 Jan 01:38 .
 drwxr-xr-x  22 julius  staff   748 26 Jan 21:42 ..
 drwxr-xr-x  13 julius  staff   442 27 Jan 01:39 .git
 -rw-r--r--   1 julius  staff   215 27 Jan 01:38 index.html
--rw-r--r--   1 julius  staff  5278 17 Mär  2009 learn.github.png
+-rw-r--r--   1 julius  staff  5278 17 M&auml;r  2009 learn.github.png
 -rw-r--r--   1 julius  staff    50 26 Jan 23:06 style.css
 </em></code>
-<p>Wechseln wir nun aber mit <code>git checkout master</code> zurück zum Branch 'master' und machen ein erneutes Directorylisting, sehen wir, dass die Datei learn.github.png nicht mehr da ist. Würden wir die index.html öffnen, würden wir sehen, dass auch das Bild gar nicht eingebaut ist, sondern der Code sich noch genauso ist wie vor dem Branchen.</p>
-<p>Soweit so gut. Wir haben einen Branch erstellt und in ihm gearbeitet. Nun möchten wir unsere Änderungen, die auch funktionieren und lauffähigen Code ergeben, wieder zurück in den Branch master spielen. Denn das ist der Branch in dem der stabile Code liegt. Das machen wir mit einem Merge.</p>
+<p>Wechseln wir nun aber mit <code>git checkout master</code> zur&uuml;ck zum Branch &#x27;master&#x27; und machen ein erneutes Directorylisting, sehen wir, dass die Datei learn.github.png nicht mehr da ist. W&uuml;rden wir die index.html &ouml;ffnen, w&uuml;rden wir sehen, dass auch das Bild gar nicht eingebaut ist, sondern der Code sich noch genauso ist wie vor dem Branchen.</p>
+<p>Soweit so gut. Wir haben einen Branch erstellt und in ihm gearbeitet. Nun m&ouml;chten wir unsere &Auml;nderungen, die auch funktionieren und lauff&auml;higen Code ergeben, wieder zur&uuml;ck in den Branch master spielen. Denn das ist der Branch in dem der stabile Code liegt. Das machen wir mit einem Merge.</p>
 <h4>Mergen</h4>
-<p>Wir wechseln mit <code>git checkout master</code> zurück in den Branch 'master'. Führen wir nun den Befehl <code>git merge test</code> aus, bekommen wir folgendes Ergebnis:</p>
+<p>Wir wechseln mit <code>git checkout master</code> zur&uuml;ck in den Branch &#x27;master&#x27;. F&uuml;hren wir nun den Befehl <code>git merge test</code> aus, bekommen wir folgendes Ergebnis:</p>
 <code><em>Updating bfda6dc..c24f5c1
 Fast-forward
  index.html       |    1 +
- learn.github.png |  Bin 0 -> 5278 bytes
+ learn.github.png |  Bin 0 -&gt; 5278 bytes
  2 files changed, 1 insertions(+), 0 deletions(-)
  create mode 100644 learn.github.png
 </em>
 </code>
 <p>
-Es wurde also die Datei 'index.html' geändert (eine Zeile) und die Datei learn.github.png geändert (in diesem Falle hinzugefügt). Bei dem PNG sieht man, dass Git dieses als Binary-File, also als Datei mit der man keine Vergleiche anstellen kann, da sie nicht aus Text besteht, erkannt hat.
+Es wurde also die Datei &#x27;index.html&#x27; ge&auml;ndert (eine Zeile) und die Datei learn.github.png ge&auml;ndert (in diesem Falle hinzugef&uuml;gt). Bei dem PNG sieht man, dass Git dieses als Binary-File, also als Datei mit der man keine Vergleiche anstellen kann, da sie nicht aus Text besteht, erkannt hat.
 </p>
 <p>
-Dies war ein einfacher Merge ohne Konflikte. Git hat alles automatisch für uns gemacht und wir brauchten uns um nichts kümmern. Mit <code>git log -p</code> können wir wieder genau sehen, was geändert wurde. Nun werden wir einen Konflikt produzieren. Wir werden in beiden Branches in der gleichen Datei die gleiche Zeile editieren.
+Dies war ein einfacher Merge ohne Konflikte. Git hat alles automatisch f&uuml;r uns gemacht und wir brauchten uns um nichts k&uuml;mmern. Mit <code>git log -p</code> k&ouml;nnen wir wieder genau sehen, was ge&auml;ndert wurde. Nun werden wir einen Konflikt produzieren. Wir werden in beiden Branches in der gleichen Datei die gleiche Zeile editieren.
 </p>
 <p>
-Ein anschließender Merge beider Branches produziert folgenden Fehler:
+Ein anschlie&szlig;ender Merge beider Branches produziert folgenden Fehler:
 </p>
 <code><em>Auto-merging style.css
 CONFLICT (content): Merge conflict in style.css
 Automatic merge failed; fix conflicts and then commit the result.
 </em></code>
-<p>Führen wir nun <code>git mergetool</code> aus, so können wir uns ein Programm aussuchen, dass uns die zueinander in Konflikt stehenden Dateien anzeigt. Nehmen wir die Option opendiff unter OS X so wird das Programm FileMerge geöffnet (wird mit den OS X Developer Tools mitinstalliert) und wir können das Problem lösen. Wird das Programm geschlossen, schreibt git die neue Datei ins Dateisystem, und schreibt eine weitere Datei mit dem Suffix '.orig'. In dieser Datei sehen wir noch mal was das Problem verursacht hat und können ggf. noch einmal nachsteuern.</p>
+<p>F&uuml;hren wir nun <code>git mergetool</code> aus, so k&ouml;nnen wir uns ein Programm aussuchen, dass uns die zueinander in Konflikt stehenden Dateien anzeigt. Nehmen wir die Option opendiff unter OS X so wird das Programm FileMerge ge&ouml;ffnet (wird mit den OS X Developer Tools mitinstalliert) und wir k&ouml;nnen das Problem l&ouml;sen. Wird das Programm geschlossen, schreibt git die neue Datei ins Dateisystem, und schreibt eine weitere Datei mit dem Suffix &#x27;.orig&#x27;. In dieser Datei sehen wir noch mal was das Problem verursacht hat und k&ouml;nnen ggf. noch einmal nachsteuern.</p>
 <code><em>body {
   color:teal;
-<<<<<<< HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
   background-color:white;
 =======
   background-color:gray;
->>>>>>> test
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; test
 }
 </em></code>
-<p>Wichtig zu wissen ist, dass Git nach einem Merge automatisch ein Commit macht. Dies kann man mit einer speziellen Option verhindern. Welche Option das ist, muss man nicht wissen, man muss wie immer nur wissen, wo es steht. Unix/Linux-Systeme haben so genannte Man-Pages. Das sind ganz tolle Dinger die man sich auch in der Shell angucken kann. Tippt man <code>git merge --help</code> ein, so bekommt man die Hilfe Seite für den 'git merge' Befehl mit all seinen Optionen, Varianten und sonstigen Beschreibungen. Das gleiche gilt funktioniert natürlich auch für <code>git --help</code> oder <code>git branch --help</code> usw. Navigieren tut man in diesen Man-Pages mit den Pfeil- bzw. Bildauf- und Bildab-Tasten. Verlassen kann man die Man-Pages mit einem Druck auf die Taste 'q'.
+<p>Wichtig zu wissen ist, dass Git nach einem Merge automatisch ein Commit macht. Dies kann man mit einer speziellen Option verhindern. Welche Option das ist, muss man nicht wissen, man muss wie immer nur wissen, wo es steht. Unix/Linux-Systeme haben so genannte Man-Pages. Das sind ganz tolle Dinger die man sich auch in der Shell angucken kann. Tippt man <code>git merge --help</code> ein, so bekommt man die Hilfe Seite f&uuml;r den &#x27;git merge&#x27; Befehl mit all seinen Optionen, Varianten und sonstigen Beschreibungen. Das gleiche gilt funktioniert nat&uuml;rlich auch f&uuml;r <code>git --help</code> oder <code>git branch --help</code> usw. Navigieren tut man in diesen Man-Pages mit den Pfeil- bzw. Bildauf- und Bildab-Tasten. Verlassen kann man die Man-Pages mit einem Druck auf die Taste &#x27;q&#x27;.
 </p>
-<p>Das Ganze sieht sicherlich etwas gewöhnungsbedürftig aus, ist aber ungemein hilfreich. - Nicht nur im Zusammenhang mit Git, sondern auch mit allen anderen Dingen die sich in einer Shell abspielen. Tippt doch Spaßenshalber mal <code>man say</code> ein.</p>
+<p>Das Ganze sieht sicherlich etwas gew&ouml;hnungsbed&uuml;rftig aus, ist aber ungemein hilfreich. - Nicht nur im Zusammenhang mit Git, sondern auch mit allen anderen Dingen die sich in einer Shell abspielen. Tippt doch Spa&szlig;enshalber mal <code>man say</code> ein.</p>
