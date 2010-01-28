@@ -391,3 +391,9 @@ Zum Schluss noch ein paar Links um weiterf&uuml;hrende Dinge nachlesen zu k&ouml
 <a href="http://www.spheredev.org/wiki/Git_for_the_lazy">http://www.spheredev.org/wiki/Git_for_the_lazy</a> (engl.) Git f&uuml;r Faule. :)
 <br />
 <a href="http://de.gitready.com/">http://de.gitready.com/</a> (deutsch) Deutsche Seite mit Tipps und Hinweisen zum Thema Git.
+
+<div class="rounded gradient padding">
+	<br />
+	<div align="center">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/de/88x31.png" /></a></div><br /><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Git Einleitung</span> von <a xmlns:cc="http://creativecommons.org/ns#" href="http://zeidlos.de" property="cc:attributionName" rel="cc:attributionURL">zeidlos</a> steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz</a>.<br />&#220;ber diese Lizenz hinausgehende Verwertungsrechte k&#246;nnen Sie unter <a xmlns:cc="http://creativecommons.org/ns#" href="http://zeidlos.de" rel="cc:morePermissions">http://zeidlos.de</a> erhalten.
+</div>
