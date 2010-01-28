@@ -27,8 +27,7 @@ Es wird unter anderem folgende Preise zu gewinnen geben:
 		</li>
 
 		<li>
-			Fotob&uuml;cher im Maximalformat von FujiFilm
-                        <a href="http://fujidirekt/a>,
+			Fotob&uuml;cher im Maximalformat von <a href="http://fujidirekt">FujiFilm</a>
 		</li>
 		<li>
 			Fineart Fotopapier von Hahnem&uuml;hle und ILFORD
